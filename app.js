@@ -12,7 +12,7 @@ let imgCpu = document.getElementById("ele-cpu");
 let opciones = ['piedra', 'papel', 'tijeras']
 let imagenes = {
     piedra: './img/piedra.png',
-    papel: './img/papel.png',
+    papel: './img/Papel.png',
     tijera: './img/Tijera.png'
 };
 
