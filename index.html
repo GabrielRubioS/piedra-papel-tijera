@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ROCK, PAPER & SCISSORS</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="icon" type="img/jpg/PNG"  href="./img/logo.png">
+
+</head>
+<body>
+    <div>
+        <h1 class="titulo">ROCK, PAPER & SCISSORS</h1>
+        <hr>
+        <div class="reset" >
+            <button class="container" id="btn"> 
+                <strong>R E S E T</strong>
+                <div id="glow">
+                  <div class="circle"></div>
+                </div>
+                <div class="inner-container">
+                  <div class="fade"></div>
+              
+                  <div class="up-text">
+                    <div class="crawl">
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                      <div class="grid-item"></div>
+                    </div>
+                  </div>
+                </div>
+              </button>
+              
+         </div>
+        <div class="cartas">
+            <div  class="Prueba">
+                <div id="Carta-user">
+                    <h1>USER</h1>
+                    <p id="point-user">CONTEO</p>
+                    <button class="botones">
+                        <img id="btn-rock" src="img/piedra.png" alt="">
+                    </button>
+                    <button class="botones">
+                        <img id="btn-paper" src="img/Papel.png" alt="">
+                    </button>
+                    <button class="botones">
+                        <img id="btn-scissor" src="img/Tijera.png" alt="">
+                    </button>
+                    <div id="mensaje">
+                        <p id="eleccion-usuario" class="choise">TU ELECCION</p>
+                    </div>
+                        <img class="usser" id="ele-user" src="img/presenta_-_simon-removebg-preview.png" alt="">
+                </div>
+                <div>
+                    <h1 id="gana-punto">Ganador</h1>
+                </div>
+                <div id="Carta-cpu">
+                    <h1>CPU</h1>
+                    <p id="point-cpu">CONTEO</p>
+                        <img id="cppu-piedra" class="cppu" src="img/piedra.png" alt="">
+                        <img id="cppu-papel" class="cppu" src="img/Papel.png" alt="">
+                        <img id="cppu-tijera" class="cppu" src="img/Tijera.png" alt="">
+                    <div id="mensaje">
+                        <p id="eleccion-cpu">ELECCION DE LA CPU</p>
+                    </div>
+                        <img class="cppu"  id="ele-cpu" src="img/presenta_-_simon-removebg-preview.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

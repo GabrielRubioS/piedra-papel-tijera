@@ -1,0 +1,84 @@
+let puntosUsuario =0;
+let puntosCpu =0;
+
+let piedra = document.querySelector("#cppu-piedra")
+let papel = document.querySelector("#cppu-papel")
+let tijera = document.querySelector("#cppu-tijera")
+
+
+let contenedorpuntosusuario = document.querySelector("#puntos-usuario");
+let contenedorpuntoscpu = document.querySelector("#puntos-cpu");
+let mensaje = document.querySelector("#mensaje");
+let contenedorganapunto = document.querySelector("#gana-punto");
+
+let contenedoreleccionusuario = document.querySelector("#eleccion-usuario")
+let contenedoreleccioncpu = document.querySelector("#eleccion-cpu")
+
+let botonesarmas = document.querySelectorAll(".botones");
+botonesarmas.forEach(boton => {
+    boton.addEventListener("click", iniciarturno)
+});
+
+
+function iniciarturno(e){
+
+
+    let eleccionpc = Math.floor(Math.random() * 3);
+    let eleccionusuario = event.currentTarget.id;
+
+
+    // piedra = 0
+    // papel = 1 
+    // tijera = 2
+
+    if (eleccionpc === 0) {
+        eleccionpc = "piedra"
+    }else if (eleccionpc === 1){
+        eleccionpc = "papel"
+    } else {
+        eleccionpc = "tijera"
+    }
+
+    //piedra vence tijera
+    // tijera vence papel
+    // papel vence piedra
+    // si son iguales es empate 
+
+    if (
+        (eleccionusuario === "piedra" && eleccionpc === "tijera") ||
+        (eleccionusuario === "tijera" && eleccionpc === "papel") ||
+        (eleccionusuario === "papel" && eleccionpc === "piedra")
+    ){
+        ganausuario();
+    } else if (
+        (eleccionpc === "piedra" && eleccionusuario === "tijera") ||
+        (eleccionpc === "tijera" && eleccionusuario === "papel") ||
+        (eleccionpc === "papel" && eleccionusuario === "piedra")
+    ){
+        ganapc();
+    } else {
+        empate();
+    }
+
+    mensaje.classList.remove ("disabled");
+
+}
+
+function ganausuario () {
+    puntosUsuario++;
+    contenedorpuntosusuario.innerHTML = puntosUsuario
+    contenedorganapunto.innerHTML = "Ganaste un punto✔"
+}
+
+function ganapc () {
+    puntosCpu++;
+    contenedorpuntoscpu.innerHTML = puntosCpu
+    contenedorganapunto.innerHTML = "La pc gano un punto😢"
+
+}
+
+function empate (){
+    contenedorganapunto.innerHTML = "Empate 😐"
+}
+
+
